@@ -1,0 +1,10 @@
+.card {
+    width: 5vh;
+    height: 7vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url("/assets/card-back.jpg");
+    background-size: contain;
+}
+
+
