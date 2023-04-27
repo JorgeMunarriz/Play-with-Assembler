@@ -1,10 +1,20 @@
+.game {
+    display: grid;
+    grid-template-columns: 20vh 20vh 20vh 20vh 20vh;
+    grid-template-rows: 25vh 25vh 25vh 25vh;
+}
+
 .card {
-    width: 5vh;
-    height: 7vh;
+    /*width: 20vh;
+    height: 25vh;*/
     position: relative;
     background-repeat: no-repeat;
     background-image: url("/assets/card-back.jpg");
     background-size: contain;
+    padding-left: 10px;
+    padding-top: 5px;
+    border-radius: 5mm;
+    border: 2px;
 }
 
 
