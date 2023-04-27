@@ -47,7 +47,27 @@ main{
   height: 500px;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 
+}
+.user-name{
+  margin: -40px 0 40px 0;
+}
+label{
+  letter-spacing: 1px;
+}
+
+.input-name{
+  border: 2px solid black;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+}
+.btn-start{
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px 50px ;
+  background: black;
+  color: azure;
 }
 .container-right{
   background: rgba(128, 128, 128, 0.541);
