@@ -1,46 +1,48 @@
-body {
+
+
+.page-2 {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   box-sizing: border-box;
-  background-image: url(assets/Batman.png);
+  background-image: url(assets/fondomarvel.jpg);
   background-size: cover;
 }
 
   
-  header {
+  .header-page-2 {
     display: grid;
     grid-template-columns: auto;
     align-items: center;
     justify-items: center;
     height: 25vh;
-    background-color: #68696b;
+    background-color:  rgb(202, 42, 42);
     color: white;
   }
   
-  header h1 {
+  div h2 {
     font-size: 3rem;
     margin: 0;
   }
   
-  header h2 {
+  .option {
     font-size: 1.5rem;
     margin: 0;
   }
 
 
-  main {
+  .main-page2 {
     display: flex;
-  
     justify-content: center;
     align-items: center;
     height: 50vh;
+
   }
   
   .btn {
-    background-color: #68696b;
-    color: white;
-    border: none;
+    background-color: #ffffff;
+    color:  rgb(202, 42, 42);
+    border: 4px solid black;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1.5rem;
@@ -50,46 +52,9 @@ body {
   }
 
   .btn:hover {
-    background-color: #8d9092;
-    color: black;
-  }
-  
-  footer {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    height: 25vh;
-    background-color: #68696b;
-    color: white;
-  }
-  
-  @media screen and (max-width: 768px) {
-    header {
-      height: 20vh;
-    }
-  
-    header h1 {
-      font-size: 2rem;
-    }
-  
-    header h2 {
-      font-size: 1rem;
-    }
-  
-    main {
-      height: 40vh;
-    }
-  
-    .btn {
-      font-size: 1.2rem;
-      padding: 8px 16px;
-    }
-  
-    footer {
-      height: 20vh;
-      position: fixed;
-      bottom: 0;
-     width: 100%;
-    }
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+ 
   }
   

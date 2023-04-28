@@ -6,8 +6,10 @@ const inputName = document.querySelector("#inputName");
 const btnPlay = document.querySelector(".btn-play");
 
 //Function to store value of input on localStorage
-function saveNameToLocal(){
-    localStorage.setItem('player', inputName.value);
+
+function createScore(){
+    const newPlayer = document.createElement("h3");
+    newPlayer.textContent = localStorage.getItem('player');
 }
 
 //Eventlistener to btnPlay
