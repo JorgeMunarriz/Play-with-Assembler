@@ -9,7 +9,18 @@ function pickName(){
     } else return
 };
 //EventLIstener
-inputName.addEventListener("submit", function(event){
+inputName.addEventListener("input", function(event){
     event.preventDefault;
     pickName()
 })
+
+
+function createCardsEasy (){
+ let cardsDiv = document.createElement("div")
+ let cardsContainer = document.createElement("div")
+
+ cardsContainer.classList.add("card-container")
+ 
+
+
+}
