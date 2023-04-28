@@ -1,5 +1,5 @@
 //Name Input
-let inputName = document.querySelector("#inputName");
+
 
 //Funcion Input
 function pickName(){
