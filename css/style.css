@@ -52,7 +52,7 @@ body {
   box-shadow: 5px 5px 5px rgba(54, 53, 53, 0.5);
   border-radius: 10px;
   padding: 10px;
-
+  margin: .8rem 0;
   max-width: 600px;
   align-items: center;
   justify-content: center;
