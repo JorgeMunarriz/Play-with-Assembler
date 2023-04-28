@@ -10,6 +10,8 @@
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script defer src="main.js"></script>
         <script defer src="Js/users.js"></script>
+        <script defer src="Js/score.js"></script>
+        <script defer src="Js/game.js"></script>
 		<title>Play with Assembler</title>
 	</head>
 	<body>
@@ -21,18 +23,21 @@
 				<section class="main-page" id="mainPage">
 					<div class="container-left">
 						<h2 class="user-name">Choose a user name</h2>
+                        <form id="formUser">
 						<label for="name" id="userName">User Name</label>
 						<input id="inputName"
 							class="input-name"
 							type="text"
 							placeholder="Player One"/>
-							<button class="btn-play"></button>
+							<button class="btn-play" id="btnPlay"></button>
+                        </form>
 					</div>
 
 					<div class="container-right" id="scoreboard">
 						<h2>Users' scores</h2>
 						<!-- <h3>Kevin</h3>
-						<p>20 seconds</p>
+						<p id="timepassed" class="time-passed">20 seconds</p>
+                        <p id="playerScore" class="player-score"></p>
 						<h3>Matías</h3>
 						<p>35 seconds</p>
 						<h3>Horacio</h3>
@@ -46,7 +51,7 @@
 					</div>
 				</section>
                 <!-- PAGE 2 -->
-                <section hidden class="page-2">
+                <section hidden class="page-2" id="mainPage2">
                     <div class="page2">
                         <div class="header-page-2">
                         <h2>Memory Game</h2>
@@ -59,7 +64,11 @@
                     </div>
                 </section>
 
+<<<<<<< HEAD
                 <section class="game-easy hidden">
+=======
+                <section class="game-easy hidden" id="mainPage3">
+>>>>>>> 29c85452ffcc4d845249e8b85f6eb4c7582675e6
                     <div class="card"></div>
                     <div class="card"></div>
                     <div class="card"></div>

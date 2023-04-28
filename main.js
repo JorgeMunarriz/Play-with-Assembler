@@ -6,7 +6,7 @@ const page4 = document.querySelector("#mainPage4")
 const page5 = document.querySelector("#mainPage5")
 
 function shuffleEasy() {
-    const cards = ["Batman", "Captain America", "Catwoman", "Green lantern", "Groot", "Hulk", "Iron man", "Spiderman", "Wolverine", "card-9", "card-10"];
+    const cards = ["Batman", "Captain America", "Catwoman", "Green lantern", "Groot", "Hulk", "Iron man", "Spiderman", "Wolverine", "Wonder Woman"];
     while (shuffledCards.length < 8) {
         const randomIndex = Math.floor(Math.random() * cards.length);
         const card = cards[randomIndex];
