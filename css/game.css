@@ -1,4 +1,4 @@
-.game {
+.game-easy {
     display: grid;
     grid-template-columns: 25vh 25vh 25vh 25vh;
     grid-template-rows: 25vh 25vh 25vh 25vh;
