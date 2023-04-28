@@ -25,26 +25,24 @@ body {
 	grid-column: span 2;
 	text-align: center;
 }
-
 .main {
 	grid-column: span 2;
 	display: grid;
-  background-image: url("img/spiderman-4378357_640.png");
-  background-color: rgb(202, 42, 42);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-  /* width: 100%; */
+	background-image: url("img/spiderman-4378357_640.png");
+	background-color: rgb(202, 42, 42);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	/* width: 100%; */
 }
 
 .main-page {
-	display:flex;
+	display: flex;
 	grid-template-columns: repeat(2, minmax(15rem, 1fr));
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 2rem 3rem;
 }
-
 
 .container-left {
 	grid-column: 1/2;
@@ -65,13 +63,13 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-	border:none;
+	border: none;
 	margin-top: 1rem;
 	padding: 2rem 3.5rem;
 	cursor: pointer;
 }
 .container-left input {
-	padding: .7em .5em;
+	padding: 0.7em 0.5em;
 	background-color: rgba(255, 255, 255, 0.541);
 	border-radius: 7px;
 	border: 1px solid rgb(84, 97, 109);
@@ -79,9 +77,8 @@ body {
 .container-left label {
 	font-size: 1.3rem;
 	font-weight: bold;
-	margin-bottom: .7rem;
-	color:  rgb(202, 42, 42);
-	
+	margin-bottom: 0.7rem;
+	color: rgb(202, 42, 42);
 }
 
 .container-right {
@@ -91,7 +88,7 @@ body {
 	border-radius: 10px;
 	padding: 1.5rem;
 	overflow: auto;
-  max-width: 600px;
+	max-width: 600px;
 	max-height: 50vh;
 	max-width: 50%;
 }
