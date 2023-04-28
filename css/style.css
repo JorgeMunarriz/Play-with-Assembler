@@ -28,7 +28,7 @@ body {
 .main {
 	grid-column: span 2;
 	display: grid;
-	background-image: url("/assets/img/spiderman-4378357_640.png");
+	background-image: url("../assets/img/spiderman-4378357_640.png");
 	background-color: rgb(202, 42, 42);
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -59,7 +59,7 @@ body {
 	justify-content: center;
 }
 .container-left .btn-play {
-	background-image: url("/assets/img/button-188_128.gif");
+	background-image: url("../assets/img/button-188_128.gif");
 	background-color: transparent;
 	background-repeat: no-repeat;
 	background-size: cover;
