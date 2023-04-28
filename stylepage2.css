@@ -1,9 +1,12 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-image: url(assets/Batman.png);
+  background-size: cover;
+}
+
   
   header {
     display: grid;
@@ -26,12 +29,10 @@ body {
   }
 
 
-
   main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
-    justify-items: center;
+    display: flex;
+  
+    justify-content: center;
     align-items: center;
     height: 50vh;
   }
