@@ -144,15 +144,15 @@ body {
 }
 
 .card {
-	width: 75%;
-	height: 100%;
+	width: 74%;
+	height: 95.5%;
 	position: relative;
 	background-repeat: no-repeat;
 	background-image: url("../assets/card-back.jpg");
 	background-size: contain;
-	border: 1px;
-	border-style: inset;
-	border-color: black;
+	border: 1px solid black;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .game-difficult {

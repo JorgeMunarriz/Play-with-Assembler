@@ -9,7 +9,7 @@ function pickName(){
     } else return
 };
 //EventLIstener
-inputName.addEventListener("submit", function(event){
+inputName.addEventListener("input", function(event){
     event.preventDefault;
     pickName()
 })
