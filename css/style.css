@@ -1,111 +1,138 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
+html,
 body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
+	height: 100%;
+	width: 100%;
 }
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  height: 10vh;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
 
-  
+.grid-container {
+	display: grid;
+	grid-auto-flow: dense;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem) 1fr));
+	/* grid-auto-rows: repeat(auto-fill, minmax(min(100%, 25rem) 1fr)); */
+	grid-template-rows: repeat(auto-fill, minmax(min(100%, 25rem) 1fr));
+	height: 100vh;
+	background-color: rgb(202, 42, 42);
 }
-main{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 70vh;
-  padding: 40px;
-  
+
+.header {
+	grid-column: span 2;
+	text-align: center;
 }
-.main-page{
-  display: flex;
-  justify-content: space-around;
-  gap: 10%;
+
+.main {
+	grid-column: span 2;
+	display: grid;
+  background-image: url("img/spiderman-4378357_640.png");
+  background-color: rgb(202, 42, 42);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  /* width: 100%; */
 }
-.container-left{
-  display: flex;
-  flex-direction: column;
-  background: rgba(128, 128, 128, 0.541);
-  box-shadow: 5px 5px 5px rgba(54, 53, 53, 0.5);
-  border-radius: 10px;
-  padding: 10px;
-  width: 100%;
+
+.main-page {
+	display:flex;
+	grid-template-columns: repeat(2, minmax(15rem, 1fr));
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 2rem 3rem;
+}
+
+
+.container-left {
+	grid-column: 1/2;
+	display: flex;
+	flex-direction: column;
+	background: rgba(255, 255, 255, 0.541);
+	box-shadow: 5px 5px 5px rgba(54, 53, 53, 0.5);
+	border-radius: 10px;
+	padding: 10px;
+
+	max-width: 600px;
+	align-items: center;
+	justify-content: center;
+}
+.container-left .btn-play {
+	background-image: url("img/button-188_128.gif");
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	border:none;
+	margin-top: 1rem;
+	padding: 2rem 3.5rem;
+	cursor: pointer;
+}
+.container-left input {
+	padding: .7em .5em;
+	background-color: rgba(255, 255, 255, 0.541);
+	border-radius: 7px;
+	border: 1px solid rgb(84, 97, 109);
+}
+.container-left label {
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin-bottom: .7rem;
+	color:  rgb(202, 42, 42);
+	
+}
+
+.container-right {
+	grid-column: 2/4;
+	background: rgba(255, 255, 255, 0.541);
+	box-shadow: 5px 5px 5px rgba(54, 53, 53, 0.5);
+	border-radius: 10px;
+	padding: 1.5rem;
+	overflow: auto;
   max-width: 600px;
-  height: 500px;
-  align-items: center;
-  justify-content: center;
-
-}
-.container-right{
-  background: rgba(128, 128, 128, 0.541);
-  box-shadow: 5px 5px 5px rgba(54, 53, 53, 0.5);
-  border-radius: 10px;
-  padding: 10px;
-  width: 100%;
-  max-width: 300px;
-  height: 500px;
+	max-height: 50vh;
+	max-width: 50%;
 }
 
-
-
-
-
-
-
-.footer{
-  position: relative;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  height: 20vh;
-  padding: 5px 40px;
-  background: linear-gradient( rgba(54, 53, 53, 0.5), rgba(66, 64, 64, 1));
-}
-.copyright-div{
-  position: relative;
-  display: inline-block;
-
-}
-.copyright{
-  color: rgba(192, 190, 190, 0.87);
-}
-.creators{
-  list-style: square;
-  color: rgb(249, 249, 253);
+.footer {
+	grid-column: span 2;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	padding: 5px 40px;
+	background: linear-gradient(rgba(255, 63, 63, 0.5), rgba(66, 64, 64, 1));
 }
 
-.social-media{
- position: relative;
- display: flex;
- justify-content: center;
- align-items: center;
- padding: 10px;
+.copyright {
+	color: rgba(192, 190, 190, 0.87);
 }
-.social-ul{
-  list-style: none;
-  display: flex;
-  gap: 10px;
+.creators {
+	list-style: square;
+	color: rgb(249, 249, 253);
 }
-.social-list{
-  font-size: 30px;
-  transition: 0.5s;
-  color: aliceblue;
-  cursor: pointer;
+
+.social-media {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
 }
-.social-list:hover{
-  transform: scale(1.3);
-  color: black;
+.social-ul {
+	list-style: none;
+	display: flex;
+	gap: 10px;
+}
+.social-list {
+	font-size: 30px;
+	transition: 0.5s;
+	color: aliceblue;
+	cursor: pointer;
+}
+.social-list:hover {
+	transform: scale(1.3);
+	color: black;
 }
