@@ -6,6 +6,8 @@ const inputName = document.querySelector("#inputName");
 const btnPlay = document.querySelector(".btn-play");
 //Succeses Variable
 let playerSucces = 0;
+//Time Variable
+let timer = 0;
 //Function to create scoreboard item
 function createScore(){
     const newPlayer = document.createElement("h3");
@@ -22,6 +24,13 @@ function createScore(){
     succeses.setAttribute("id", "playerScore");
     scoreboard.appendChild(succeses);
 };
-
+function startTimer(){
+    clock = setInterval(()=> {timer++;
+    const timePassed = document.querySelectorAll("#timePassed");
+timePassed[timePassed.length - 1] = timer;},1000)
+}
+function stopTimer(){
+    clearInterval(clock);
+}
 //Eventlistener to btnPlay
 btnPlay.addEventListener("click", saveNameToLocal)
