@@ -1,14 +1,15 @@
-let player = { name: "" };
+//Name Input
 let inputName = document.querySelector("#inputName");
 
-
-localStorage.setItem("player", JSON.stringify(player));
-const playerLS = localStorage.getItem("player");
-const playerObj = JSON.parse(playerLS);
-console.log(playerObj)
-inputName.addEventListener("submit", () => {
-  if (player.name.length > 3 && player.name.length < 15) {
-     playerObj = localStorage.setItem("player");
-
-  }
-});
+//Funcion Input
+function pickName(){
+    let newPlayer = inputName.value;
+    if (newPlayer.length > 3 && newPlayer.length < 15){
+        localStorage.setItem("player", newPlayer)
+    } else return
+};
+//EventLIstener
+inputName.addEventListener("submit", function(event){
+    event.preventDefault;
+    pickName()
+})
