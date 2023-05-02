@@ -1,9 +1,8 @@
 //Scoreboard Selector
 const scoreboard = document.querySelector("#scoreboard");
-//Input Name selector
-const inputName = document.querySelector("#inputName");
-//Input buton selector
-const btnPlay = document.querySelector("#btnPlay");
+
+
+
 //Succeses Variable
 let playerSucces = 0;
 //Time Variable

@@ -51,15 +51,15 @@ function shuffleDifficult() {
    
 
    
-    cardDifficult = cardDifficult.concat(shuffledCards);
+    shuffledCards = shuffledCards.concat(shuffledCards, shuffledCards);
     for (let i = 0; i < shuffledCards.length; i++) {
       const j = Math.floor(Math.random() * (i + 1));
-      [cardDifficult[i], cardDifficult[j]] = [cardDifficult[j], cardDifficult[i]];
+      [shuffledCards[i], shuffledCards[j]] = [shuffledCards[j], shuffledCards[i]];
     }
-    cardDifficult = cardDifficult.concat(shuffledCards);
-    for (let i = 0; i < shuffledCards.length; i++) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [cardDifficult[i], cardDifficult[j]] = [cardDifficult[j], cardDifficult[i]];
-    }
+    // cardDifficult = cardDifficult.concat(shuffledCards);
+    // for (let i = 0; i < shuffledCards.length; i++) {
+    //   const j = Math.floor(Math.random() * (i + 1));
+    //   [cardDifficult[i], cardDifficult[j]] = [cardDifficult[j], cardDifficult[i]];
+    // }
 
   }

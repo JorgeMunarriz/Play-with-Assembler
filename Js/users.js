@@ -1,14 +1,20 @@
 //Name Input
 
 //Funcion Input
+let playerNumber = 1;
+
 function pickName() {
   let newPlayer = inputName.value;
+  let player = "player_" + playerNumber;
+
   if (newPlayer.length > 3 && newPlayer.length < 15) {
-    localStorage.setItem("player", newPlayer);
+    localStorage.setItem(player, newPlayer);
+    playerNumber++;
   } else return;
 }
+
 //EventLIstener
-inputName.addEventListener("input", function (event) {
+inputName.addEventListener("submit", function (event) {
   event.preventDefault;
   pickName();
 });
