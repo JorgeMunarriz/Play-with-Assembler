@@ -62,11 +62,13 @@ btnEasy.addEventListener("click", function() {
   headerMain.hidden = false;
   page3.classList.remove('hidden')
   shuffleEasy();
+  createCardsEasy();
 });
 const btnHard = document.querySelector("#hard");
 btnHard.addEventListener("click", function() {
   page2.hidden = true;
   headerMain.hidden = false;
   page4.classList.remove('hidden')
-  shuffleEasy();
+  shuffleDifficult();
+  createCardsDifficult();
 });
