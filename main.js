@@ -13,7 +13,7 @@ const page4 = document.querySelector("#mainPage4");
 const page5 = document.querySelector("#mainPage5");
 
 //  formulario
-btnPlay.addEventListener("submit", function (event) {
+btnPlay.addEventListener("click", function (event) {
   event.preventDefault(); // Evita la recarga de la página
   let newPlayer = inputName.value;
 
