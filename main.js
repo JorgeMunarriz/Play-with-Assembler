@@ -56,6 +56,13 @@ function shuffleEasy() {
         [shuffledCards[i], shuffledCards[j]] =[shuffledCards[j], shuffledCards[i]]
     }
 };
+const btnEasy = document.querySelector("#easy");
+btnEasy.addEventListener("click", function() {
+  page2.hidden = true;
+  headerMain.hidden = false;
+  page3.classList.remove('hidden')
+  shuffleEasy();
+});
 const btnHard = document.querySelector("#hard");
 btnHard.addEventListener("click", function() {
   page2.hidden = true;
