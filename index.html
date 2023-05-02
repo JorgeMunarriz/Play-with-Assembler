@@ -20,15 +20,15 @@
 	</head>
 	<body>
 		<div class="grid-container">
-			<header id="header" class="header">
+			<header id="headerMain" class="header">
 				<h1>Memory Game</h1>
 			</header>
 			<main class="main">
-				<section hidden class="main-page" id="mainPage">
-					<div class="container-left">
+				<section id="mainPage" class="main-page">
+					<div class="container-left" id="containerLeft">
 						<form id="formUser">
 							<legend class="user-name">
-								<span>Choose</span> a user name
+								Choose a user name
 							</legend>
 							<label for="name" id="userName">User Name:</label>
 							<input
@@ -36,7 +36,10 @@
 								class="input-name"
 								type="text"
 								placeholder="Player One" />
-							<button class="btn-play" id="btnPlay"></button>
+							<button
+								type="submit"
+								class="btn-play"
+								id="btnPlay"></button>
 						</form>
 					</div>
 
@@ -75,124 +78,232 @@
 					</div>
 				</section>
 
-				-
-				<section class="game-easy hidden">
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
+				  <!-- <section class="game-container hidden" id="mainPage3">
+					<div class="game-easy">
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
 					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
+					<div class="container-right" id="scoreboard">
+						<h2>Users' scores</h2>
+						<h3>Kevin</h3>
+						<p id="timepassed" class="time-passed">20 seconds</p>
+						<p id="playerScore" class="player-score"></p>
+						<h3>Matías</h3>
+						<p>35 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
 					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
-					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
-					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
-					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
-					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
-					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
-					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
-					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
-					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
-					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
-					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
-					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
-					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
-					</div>
-					<div class="card">
-						<img
-							src="../assets/card-back.jpg"
-							alt="Carta" />
-					</div>
-					
+				</section>   -->
 
-					
+				<!-- Difficult For The Champions -->
+				 <section class="game-container hidden" id="mainPage4">
+					<div class="game-difficult">
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+					</div>
+					<div class="container-right" id="scoreboard">
+						<h2>Users' scores</h2>
+						<h3>Kevin</h3>
+						<p id="timepassed" class="time-passed">20 seconds</p>
+						<p id="playerScore" class="player-score"></p>
+						<h3>Matías</h3>
+						<p>35 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+					</div>
 				</section>
-				<!-- <section class="game-difficult hidden" id="mainPage4">
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                </section> -->
 			</main>
 			<footer id="footerPage" class="footer">
 				<div class="copyright-div">
