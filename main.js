@@ -91,3 +91,4 @@ btnHard.addEventListener("click", function () {
   createCardsDifficult();
   createScoreDifficult();
 });
+

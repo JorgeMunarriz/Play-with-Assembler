@@ -1,12 +1,24 @@
 //scoreboardEasy Selector
 const scoreboard = document.querySelector("#scoreboard");
 const scoreboardEasy = document.querySelector("#scoreboardEasy");
-const scoreboardEasyDiff = document.querySelector("#scoreboardDifficult");
+const scoreboardDiff = document.querySelector("#scoreboardDifficult");
 const scoreDiv1 = document.querySelector(".container-right1");
 const scoreDiv2 = document.querySelector(".container-right2");
-const btnReloaded = document.querySelector("#btnReload")
+const btnReloaded = document.querySelector("#btnReload");
 
 //constants game
+const cards = [
+    "Batman",
+    "Captain America",
+    "Catwoman",
+    "Green lantern",
+    "Groot",
+    "Hulk",
+    "Iron man",
+    "Spiderman",
+    "Wolverine",
+    "Wonder Woman",
+  ];
 let moves = 0;
 let matches = 0;
 let shuffledCards = [];
@@ -15,8 +27,8 @@ let selectedCards = [];
 //Succeses Variable
 let playerSucces = 0;
 //Time Variable
-let startTimer = null;
-let hightScores = [{ player: "", level: "", moves: "", time: "", matches: "" }];
+let timer = 0;
+let hightScores = JSON.parse(localStorage.getItem("hightScores")) || [];
 
 //Function to create scoreboardEasy item
 function saveScore(level, moves, time, matches) {
@@ -87,10 +99,10 @@ function createScoreDifficult() {
   const timePassed = document.createElement("p");
   timePassed.setAttribute("class", "time-passed");
   timePassed.setAttribute("id", "timePassed");
-  scoreboardDifficult.appendChild(timePassed);
+  scoreboardDiff.appendChild(timePassed);
   let timer = 120;
-  let timeLocal = Date.now()
-  timer = timeLocal - timePassed
+  let timeLocal = Date.now();
+  timePassed = timer - timeLocal;
 
   const succeses = document.createElement("p");
   succeses.setAttribute("class", "player-score");
@@ -99,12 +111,12 @@ function createScoreDifficult() {
   const movesP = document.createElement("p");
   movesP.setAttribute("class", "player-score");
   movesP.setAttribute("id", "movesP");
-  scoreboardDifficult.appendChild(movesP);
-  scoreboardDifficult.scrollTop = scoreboardDifficult.scrollHeight;
+  scoreboardDiff.appendChild(movesP);
+  scoreboardDiff.scrollTop = scoreboardDiff.scrollHeight;
   const matchesP = document.createElement("p");
   matchesP.setAttribute("class", "player-score");
   matchesP.setAttribute("id", "matchesP");
-  scoreboardDifficult.appendChild(matchesP);
+  scoreboardDiff.appendChild(matchesP);
   const btnReload = document.createElement("button");
   btnReload.classList.add("btn-reload");
   btnReload.textContent = "Reload";
@@ -124,20 +136,8 @@ function stopTimer() {
   clearInterval(clock);
 }
 
-
 function shuffleEasy() {
-  const cards = [
-    "Batman",
-    "Captain America",
-    "Catwoman",
-    "Green lantern",
-    "Groot",
-    "Hulk",
-    "Iron man",
-    "Spiderman",
-    "Wolverine",
-    "Wonder Woman",
-  ];
+ 
   while (shuffledCards.length < 8) {
     const randomIndex = Math.floor(Math.random() * cards.length);
     const card = cards[randomIndex];
@@ -154,14 +154,6 @@ function shuffleEasy() {
   }
   return [shuffledCards, selectedCards];
 }
-function selelectCards(index) {
-  if (!selectedCards[index]) {
-    selectedCards[index] = true;
-    return shuffledCards[index];
-  }
-  return null;
-}
-
 
 let cardDifficult = shuffledCards;
 function shuffleDifficult() {
@@ -204,8 +196,9 @@ function createCardsEasy() {
 
     cardsContainer.classList.add("card-container");
     cardsImg.classList.add("card");
+    
     cardsImg.src = "assets/" + shuffledCards[i] + ".png";
-    cardsBack.classList.add("card-back");
+    cardsBack.classList.add("active");
 
     gameEasy.appendChild(cardsContainer);
     cardsContainer.appendChild(cardsImg);
@@ -232,9 +225,21 @@ function createCardsDifficult() {
   }
 }
 
+
+function selectCards(index) {
+  if (!selectedCards[index]) {
+    selectedCards[index] = true;
+    return shuffledCards[index];
+  }
+  return null;
+}
+function canClickCard(card) {
+  return !card.isMatched && !card.isFlipped;
+}
+
 function handleCardClick(card) {
   if (canClickCard(card)) {
-    card.classList.add("flipped");
+    card.classList.add("active");
     selectedCards.push(card);
     if (selectedCards.length === 2) {
       moves++; // Incrementar el contador de movimientos
@@ -242,14 +247,14 @@ function handleCardClick(card) {
       if (cardsMatch(selectedCards[0], selectedCards[1])) {
         matches++;
         updateMatches(); // Actualizar la pantalla con el número de aciertos
-        selectedCards.forEach((card) => card.classList.add("matched"));
+        selectedCards.forEach((card) => card.classList.add("flipped"));
         selectedCards = [];
         if (matches === totalMatches) {
-          handleGameEnd();
+          gameEnd();
         }
       } else {
         setTimeout(() => {
-          selectedCards.forEach((card) => card.classList.remove("flipped"));
+          selectedCards.forEach((card) => card.classList.remove("active"));
           selectedCards = [];
         }, 1000);
       }
@@ -285,12 +290,11 @@ function initCounters() {
   }
 }
 
-btnReloaded.addEventListener("click", resetGame)
+// btnReloaded.addEventListener("click", resetGame)
 
-function resetGame() {
-    shuffledCards = [];
-    selectedCards = [];
-    stopTimer();
-    initCounters()
-    
-  }
+// function resetGame() {
+
+//     stopTimer();
+//     initCounters()
+
+//   }
