@@ -1,31 +1,15 @@
 /* ---------Page 2   */ 
 // para que se cargue le documento
-inputName.addEventListener("click", function() {
 
-    // formulario y el botón de Play
-    const form = document.querySelector("#formUser");
-    const btnPlay = document.querySelector("#btnPlay");
-  
-    //  formulario
-    form.addEventListener("submit", function(event) {
-      event.preventDefault(); // Evita la recarga de la página
-      const inputName = document.querySelector("#inputName");
-  
-      // valor positivo
-      if (inputName.value.trim() !== "") {
-        // Ocultar la primera pagina y visualizar la segunda
-       const mainPage = document.querySelector("#mainPage");
-        const mainPage2 = document.querySelector("#mainPage2");
-        Section.classList.remove("main-page")
-  
-        // texto pagina 2
-        const option = document.querySelector(".option");
-        option.textContent = `Choose An Option, ${inputName.value}!`;
-      }
-    });
+const mainPage = document.getElementById('mainPage');
+const mainPage2 = document.getElementById('mainPage2');
+const btnPlay = document.getElementById('btnPlay');
 
-  
-  });
+btnPlay.addEventListener('click', function() {
+mainPage2.removeAttribute('hidden');
+mainPage.setAttribute('hidden', true);
+});
+
 
 
 
