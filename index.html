@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/stylepage2.css" />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <script defer src="main.js"></script>
-    <script defer src="Js/users.js"></script>
-    <script defer src="Js/score.js"></script>
-    <script defer src="Js/game.js"></script>
-    <title>Play with Assembler</title>
-  </head>
-  <body>
-    <div class="grid-container">
-      <header id="headerMain" class="header">
-        <h1>Memory Game</h1>
-      </header>
-      <main class="main">
-        <section id="mainPage" class="main-page">
-          <div class="container-left" id="containerLeft">
-            <form id="formUser">
-              <legend class="user-name">Choose a user name</legend>
-              <label for="name" id="userName">User Name:</label>
-              <input
-                id="inputName"
-                class="input-name"
-                type="text"
-                placeholder="Player One"
-              />
-              <button type="submit" class="btn-play" id="btnPlay"></button>
-            </form>
-          </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/stylepage2.css" />
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script defer src="main.js"></script>
+		<script defer src="Js/users.js"></script>
+		<script defer src="Js/score.js"></script>
+		<script defer src="Js/game.js"></script>
+		<title>Play with Assembler</title>
+	</head>
+	<body>
+		<div class="grid-container">
+			<header id="headerMain" class="header">
+				<h1>Memory Game</h1>
+			</header>
+			<main class="main">
+				<section id="mainPage  hidden"  class="main-page">
+					<div class="container-left" id="containerLeft">
+						<form id="formUser">
+							<legend class="user-name">
+								Choose a user name
+							</legend>
+							<label for="name" id="userName">User Name:</label>
+							<input
+								id="inputName"
+								class="input-name"
+								type="text"
+								placeholder="Player One" />
+							<button
+								type="submit"
+								class="btn-play"
+								id="btnPlay"></button>
+						</form>
+					</div>
 
           <div class="container-right" id="scoreboard">
             

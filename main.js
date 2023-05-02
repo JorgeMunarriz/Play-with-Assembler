@@ -1,21 +1,15 @@
-/* ---------Page 2   */
-// para que se cargue el documento
+/* ---------Page 2   */ 
+// para que se cargue le documento
+/*
+const mainPage = document.getElementById('mainPage');
+const mainPage2 = document.getElementById('mainPage2');
+const btnPlay = document.getElementById('btnPlay');
 
-// formulario y el botón de Play
-const form = document.querySelector("#formUser");
-const btnPlay = document.querySelector("#btnPlay");
-//Input Name selector
-const inputName = document.querySelector("#inputName");
-const mainPage = document.querySelector("#mainPage");
-const page2 = document.querySelector("#mainPage2");
-const page3 = document.querySelector("#mainPage3");
-const page4 = document.querySelector("#mainPage4");
-const page5 = document.querySelector("#mainPage5");
-
-//  formulario
-btnPlay.addEventListener("click", function (event) {
-  event.preventDefault(); // Evita la recarga de la página
-  let newPlayer = inputName.value;
+btnPlay.addEventListener('click', function() {
+mainPage2.removeAttribute('hidden');
+mainPage.setAttribute('hidden', true);
+});
+*/
 
   if (newPlayer.length > 3 && newPlayer.length < 15) {
     localStorage.setItem(player, newPlayer);
@@ -30,7 +24,7 @@ btnPlay.addEventListener("click", function (event) {
     const nameUser = document.querySelector("#nameUser");
     nameUser.textContent = `Choose An Option, ${inputName.value}!`;
   } else return;
-});
+
 
 /*----------page 2      */
 let shuffledCards = [];
