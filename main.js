@@ -1,15 +1,22 @@
-/* ---------Page 2   */ 
+/* ---------Page 2   */
 // para que se cargue le documento
-/*
-const mainPage = document.getElementById('mainPage');
-const mainPage2 = document.getElementById('mainPage2');
-const btnPlay = document.getElementById('btnPlay');
 
-btnPlay.addEventListener('click', function() {
-mainPage2.removeAttribute('hidden');
-mainPage.setAttribute('hidden', true);
-});
-*/
+const mainPage = document.getElementById("mainPage");
+const page2 = document.getElementById("mainPage2");
+const page3 = document.getElementById("mainPage3");
+const page4 = document.getElementById("mainPage4");
+const page5 = document.getElementById("mainPage5");
+
+
+const btnPlay = document.getElementById("btnPlay");
+let playerNumber = 1;
+let player = "player_" + playerNumber;
+
+btnPlay.addEventListener("click", function (event) {
+  event.preventDefault();
+  let newPlayer = inputName.value;
+  
+  
 
   if (newPlayer.length > 3 && newPlayer.length < 15) {
     localStorage.setItem(player, newPlayer);
@@ -24,7 +31,7 @@ mainPage.setAttribute('hidden', true);
     const nameUser = document.querySelector("#nameUser");
     nameUser.textContent = `Choose An Option, ${inputName.value}!`;
   } else return;
-
+});
 
 /*----------page 2      */
 let shuffledCards = [];

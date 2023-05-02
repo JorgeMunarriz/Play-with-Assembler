@@ -1,8 +1,7 @@
 //Name Input
 
 //Funcion Input
-let playerNumber = 1;
-let player = "player_" + playerNumber;
+
 
 function pickName() {
   let newPlayer = inputName.value;
