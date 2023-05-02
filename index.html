@@ -5,39 +5,49 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./css/style.css" />
-        <link rel="stylesheet" href="./css/stylepage2.css"/>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script defer src="main.js"></script>
-        <script defer src="Js/users.js"></script>
-        <script defer src="Js/score.js"></script>
-        <script defer src="Js/game.js"></script>
+		<link rel="stylesheet" href="./css/stylepage2.css" />
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script defer src="main.js"></script>
+		<script defer src="Js/users.js"></script>
+		<script defer src="Js/score.js"></script>
+		<script defer src="Js/game.js"></script>
 		<title>Play with Assembler</title>
 	</head>
 	<body>
-        <div class="grid-container">
-			<header id="header" class="header">
+		<div class="grid-container">
+			<header id="headerMain" class="header">
 				<h1>Memory Game</h1>
 			</header>
 			<main class="main">
-				<section hidden class="main-page" id="mainPage">
-					<div class="container-left">
-						<h2 class="user-name">Choose a user name</h2>
-                        <form id="formUser">
-						<label for="name" id="userName">User Name</label>
-						<input id="inputName"
-							class="input-name"
-							type="text"
-							placeholder="Player One"/>
-							<button class="btn-play" id="btnPlay"></button>
-                        </form>
+				<section id="mainPage" class="main-page">
+					<div class="container-left" id="containerLeft">
+						<form id="formUser">
+							<legend class="user-name">
+								Choose a user name
+							</legend>
+							<label for="name" id="userName">User Name:</label>
+							<input
+								id="inputName"
+								class="input-name"
+								type="text"
+								placeholder="Player One" />
+							<button
+								type="submit"
+								class="btn-play"
+								id="btnPlay"></button>
+						</form>
 					</div>
 
 					<div class="container-right" id="scoreboard">
 						<h2>Users' scores</h2>
-						<!-- <h3>Kevin</h3>
+						<h3>Kevin</h3>
 						<p id="timepassed" class="time-passed">20 seconds</p>
-                        <p id="playerScore" class="player-score"></p>
+						<p id="playerScore" class="player-score"></p>
 						<h3>Matías</h3>
 						<p>35 seconds</p>
 						<h3>Horacio</h3>
@@ -47,100 +57,286 @@
 						<h3>Horacio</h3>
 						<p>40 seconds</p>
 						<h3>Horacio</h3>
-						<p>40 seconds</p> -->
+						<p>40 seconds</p>
 					</div>
 				</section>
-                <!-- PAGE 2 -->
-                <section hidden class="page-2" id="mainPage2">
-                    <div class="page2">
-                        <div class="header-page-2">
-                        <h2>Memory Game</h2>
-                        <p class="option">Choose An Option</p>
-                        </div>
-                        <div class="main-page2">
-                        <button id="easy" class="btn">Easy For Beginners</button>
-                        <button id="hard"  class="btn">Difficult For The Champions</button>
-                        </div>
-                    </div>
-                </section>
+				<!-- PAGE 2 -->
+				<section hidden class="page-2" id="mainPage2">
+					<div class="page2">
+						<div class="header-page-2">
+							<h2>Memory Game</h2>
+							<p class="option">Choose An Option</p>
+						</div>
+						<div class="main-page2">
+							<button id="easy" class="btn">
+								Easy For Beginners
+							</button>
+							<button id="hard" class="btn">
+								Difficult For The Champions
+							</button>
+						</div>
+					</div>
+				</section>
 
-                <section class="game-easy hidden">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                </section>
-                <section class="game-difficult hidden" id="mainPage4">
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                    <div class="card-container1"><div class="card"></div></div>
-                </section>
+				  <section class="game-container hidden" id="mainPage3">
+					<div class="game-easy" id="gameEasy"> 
+						<!-- <div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="../assets/Batman.png" />
+							<div class="card-back"></div>
+						</div> -->
+					</div>
+					<div class="container-right" id="scoreboard">
+						<h2>Users' scores</h2>
+						<h3>Kevin</h3>
+						<p id="timepassed" class="time-passed">20 seconds</p>
+						<p id="playerScore" class="player-score"></p>
+						<h3>Matías</h3>
+						<p>35 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+					</div>
+				</section> 
 
-            </main>
-            <footer id="footerPage" class="footer">
-                <div class="copyright-div">
-                    <p class="copyright">2023 &copy Copyright Squad L:</p>
-                    <ul class="creators">
-                        <li class="cr-names">Fran Pérez</li>
-                        <li class="cr-names">Horacio Martínez</li>
-                        <li class="cr-names">Kevin Polania</li>
-                        <li class="cr-names">Matias Alaimo</li>
-                        <li class="cr-names">Jorge Munárriz</li>
-                    </ul>
-                </div>
-                <div class="social-media">
-                    <ul class="social-ul">
-                        <a href="#">
-                        <li class="social-list">
-                        <ion-icon name="logo-facebook"></ion-icon></li></a>
-                        <a href="#"><li class="social-list">
-                        <ion-icon name="logo-instagram"></ion-icon></li></a>
-                        <a href="#"><li class="social-list">
-                        <ion-icon name="logo-twitter"></ion-icon></li></a>
-                        <a href="#"><li class="social-list">
-                        <ion-icon name="logo-github"></ion-icon></li></a>
-                    </ul>
-                </div>
-            </footer>
-        </div>
-    </body>
+				<!-- Difficult For The Champions -->
+				 <section class="game-container hidden" id="mainPage4">
+					<div class="game-difficult" id="gameDifficult">
+						<!-- <div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div>
+						<div class="card-container">
+							<img class="card" src="assets/Batman.png" />
+							<div class="card-back"></div>
+						</div> -->
+					</div>
+					<div class="container-right" id="scoreboard">
+						<h2>Users' scores</h2>
+						<h3>Kevin</h3>
+						<p id="timepassed" class="time-passed">20 seconds</p>
+						<p id="playerScore" class="player-score"></p>
+						<h3>Matías</h3>
+						<p>35 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+						<h3>Horacio</h3>
+						<p>40 seconds</p>
+					</div>
+				</section>
+			</main>
+			<footer id="footerPage" class="footer">
+				<div class="copyright-div">
+					<p class="copyright">2023 &copy Copyright Squad L:</p>
+					<ul class="creators">
+						<li class="cr-names">Fran Pérez</li>
+						<li class="cr-names">Horacio Martínez</li>
+						<li class="cr-names">Kevin Polania</li>
+						<li class="cr-names">Matias Alaimo</li>
+						<li class="cr-names">Jorge Munárriz</li>
+					</ul>
+				</div>
+				<div class="social-media">
+					<ul class="social-ul">
+						<a href="#">
+							<li class="social-list">
+								<ion-icon name="logo-facebook"></ion-icon></li
+						></a>
+						<a href="#"
+							><li class="social-list">
+								<ion-icon name="logo-instagram"></ion-icon></li
+						></a>
+						<a href="#"
+							><li class="social-list">
+								<ion-icon name="logo-twitter"></ion-icon></li
+						></a>
+						<a href="#"
+							><li class="social-list">
+								<ion-icon name="logo-github"></ion-icon></li
+						></a>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	</body>
 </html>

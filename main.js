@@ -14,7 +14,7 @@ inputName.addEventListener("click", function() {
       // valor positivo
       if (inputName.value.trim() !== "") {
         // Ocultar la primera pagina y visualizar la segunda
-        const mainPage = document.querySelector("#mainPage");
+       const mainPage = document.querySelector("#mainPage");
         const mainPage2 = document.querySelector("#mainPage2");
         Section.classList.remove("main-page")
   
@@ -23,6 +23,7 @@ inputName.addEventListener("click", function() {
         option.textContent = `Choose An Option, ${inputName.value}!`;
       }
     });
+
   
   });
 
@@ -42,13 +43,29 @@ function shuffleEasy() {
         const randomIndex = Math.floor(Math.random() * cards.length);
         const card = cards[randomIndex];
         if (!shuffledCards.includes(card)) {
-        shuffledCards.push(card);
+            shuffledCards.push(card);
             cards.splice(randomIndex, 1);
         }
-        }
+    }
     shuffledCards = shuffledCards.concat(shuffledCards);
     for(let i = 0; i < shuffledCards.length; i++) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffledCards[i], shuffledCards[j]] =[shuffledCards[j], shuffledCards[i]]
-}
+    }
 };
+const btnEasy = document.querySelector("#easy");
+btnEasy.addEventListener("click", function() {
+  page2.hidden = true;
+  headerMain.hidden = false;
+  page3.classList.remove('hidden')
+  shuffleEasy();
+  createCardsEasy();
+});
+const btnHard = document.querySelector("#hard");
+btnHard.addEventListener("click", function() {
+  page2.hidden = true;
+  headerMain.hidden = false;
+  page4.classList.remove('hidden')
+  shuffleDifficult();
+  createCardsDifficult();
+});
