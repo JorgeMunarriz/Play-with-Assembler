@@ -34,7 +34,6 @@ btnPlay.addEventListener("submit", function (event) {
 
 /*----------page 2      */
 let shuffledCards = [];
-const page1 = document.querySelector("#mainPage");
 
 function shuffleEasy() {
   const cards = [
