@@ -17,7 +17,7 @@
     <script defer src="main.js"></script>
     <script defer src="Js/users.js"></script>
     <script defer src="Js/score.js"></script>
-    <script defer src="Js/game.js"></script>
+    <!-- <script defer src="Js/game.js"></script> -->
     <title>Play with Assembler</title>
   </head>
   <body>
@@ -48,7 +48,7 @@
           <div class="page2">
             <div class="header-page-2">
               <h2>Memory Game</h2>
-              <p class="option" id="nameUser">Choose An Option</p>
+              <p class="option" id="nameUser"></p>
             </div>
             <div class="main-page2">
               <button id="easy" class="btn">Easy For Beginners</button>
@@ -59,17 +59,17 @@
         <!-- PAGE 3 game Easy-->
         <section class="game-container hidden" id="mainPage3">
           <div class="game-easy" id="gameEasy"></div>
-          <div class="container-right" id="scoreboardEasy"></div>
+		  <div class="container-score">
+          <div class="container-right container-right1" id="scoreboardEasy"></div>
+		  </div>
         </section>
 
         <!-- Page 4 game Difficult -->
         <section class="game-container hidden" id="mainPage4">
           <div class="game-difficult" id="gameDifficult"></div>
-          <div class="container-right" id="scoreboardDifficult">
-            <h2>Users' scores</h2>
-
-            <p id="timepassed" class="time-passed">20 seconds</p>
-            <p id="playerScore" class="player-score"></p>
+		  <div class="container-score">
+          <div class="container-right container-right2" id="scoreboardDifficult">
+            </div>
           </div>
         </section>
         <section class="page-5" id="mainPage5"></section>

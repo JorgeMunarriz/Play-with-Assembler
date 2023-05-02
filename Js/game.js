@@ -1,3 +1,8 @@
+let moves = 0;
+let matches = 0;
+let shuffledCards = [];
+let selectedCards = [];
+
 function shuffleEasy() {
   const cards = [
     "Batman",
@@ -16,15 +21,28 @@ function shuffleEasy() {
     const card = cards[randomIndex];
     if (!shuffledCards.includes(card)) {
       shuffledCards.push(card);
-      cards.splice(randomIndex, 1);
+      selectedCards.push(false);
     }
   }
   shuffledCards = shuffledCards.concat(shuffledCards);
   for (let i = 0; i < shuffledCards.length; i++) {
     const j = Math.floor(Math.random() * (i + 1));
     [shuffledCards[i], shuffledCards[j]] = [shuffledCards[j], shuffledCards[i]];
+    selectedCards.splice(j, 0, selectedCards.splice(i, 1)[0]);
   }
-  createScore();
+  return [shuffledCards, selectedCards];
+}
+function selelectCards(index) {
+  if (!selectedCards[index]) {
+    selectedCards[index] = true;
+    return shuffledCards[index];
+  }
+  return null;
+}
+function resetGame() {
+  shuffledCards = [];
+  selectedCards = [];
+  s;
 }
 
 let cardDifficult = shuffledCards;
@@ -46,6 +64,7 @@ function shuffleDifficult() {
     const card = cards[randomIndex];
     if (!shuffledCards.includes(card)) {
       shuffledCards.push(card);
+      selectedCards.push(false);
       cards.splice(randomIndex, 1);
     }
   }
@@ -55,11 +74,6 @@ function shuffleDifficult() {
     const j = Math.floor(Math.random() * (i + 1));
     [shuffledCards[i], shuffledCards[j]] = [shuffledCards[j], shuffledCards[i]];
   }
-  // cardDifficult = cardDifficult.concat(shuffledCards);
-  // for (let i = 0; i < shuffledCards.length; i++) {
-  //   const j = Math.floor(Math.random() * (i + 1));
-  //   [cardDifficult[i], cardDifficult[j]] = [cardDifficult[j], cardDifficult[i]];
-  // }
 }
 
 function createCardsEasy() {
@@ -80,6 +94,7 @@ function createCardsEasy() {
     cardsContainer.appendChild(cardsBack);
   }
 }
+
 function createCardsDifficult() {
   const gameDifficult = document.querySelector("#gameDifficult");
 
@@ -96,5 +111,58 @@ function createCardsDifficult() {
     gameDifficult.appendChild(cardsContainer);
     cardsContainer.appendChild(cardsImg);
     cardsContainer.appendChild(cardsBack);
+  }
+}
+
+function handleCardClick(card) {
+  if (canClickCard(card)) {
+    card.classList.add("flipped");
+    selectedCards.push(card);
+    if (selectedCards.length === 2) {
+      moves++; // Incrementar el contador de movimientos
+      updateMoves(); // Actualizar la pantalla con el número de movimientos
+      if (cardsMatch(selectedCards[0], selectedCards[1])) {
+        matches++;
+        updateMatches(); // Actualizar la pantalla con el número de aciertos
+        selectedCards.forEach((card) => card.classList.add("matched"));
+        selectedCards = [];
+        if (matches === totalMatches) {
+          handleGameEnd();
+        }
+      } else {
+        setTimeout(() => {
+          selectedCards.forEach((card) => card.classList.remove("flipped"));
+          selectedCards = [];
+        }, 1000);
+      }
+    }
+  }
+}
+function updateMoves() {
+  const movesElement = document.querySelector("#moves");
+  movesElement.textContent = moves;
+  localStorage.setItem("moves", moves); // Guardar el número de movimientos en la memoria local
+}
+
+function updateMatches() {
+  const matchesElement = document.querySelector("#matches");
+  matchesElement.textContent = matches;
+  localStorage.setItem("matches", matches); // Guardar el número de aciertos en la memoria local
+}
+
+function initCounters() {
+  moves = 0;
+  matches = 0;
+  updateMoves();
+  updateMatches();
+  const savedMoves = localStorage.getItem("moves");
+  if (savedMoves) {
+    moves = parseInt(savedMoves);
+    updateMoves();
+  }
+  const savedMatches = localStorage.getItem("matches");
+  if (savedMatches) {
+    matches = parseInt(savedMatches);
+    updateMatches();
   }
 }

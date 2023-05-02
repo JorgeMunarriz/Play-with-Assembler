@@ -89,15 +89,24 @@ body {
   font-weight: 550;
   color: rgb(202, 42, 42);
 }
-
+.container-score{	
+	display: flex;
+	flex-direction: column;
+	
+	min-height: 50vh;
+	gap: 1vh;
+	align-items: center;
+}
 .container-right {
+  
   display: flex;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.541);
   box-shadow: 5px 5px 5px rgba(54, 53, 53, 0.5);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 2rem;
   overflow: auto;
+  min-height: 45vh;
   max-height: 50vh;
 }
 .user-h2 {
@@ -174,6 +183,23 @@ div h2 {
   color: rgb(255, 255, 255);
   border: 2px solid white;
 }
+.btn-reload {
+	background-color: #ffffff;
+	color: rgb(202, 42, 42);
+	border: 4px solid black;
+	
+	border-radius: 5px;
+	font-size: 1.5rem;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+	width: 100px;
+	height: 40px;
+  }
+  .btn-reload:hover {
+	background-color: #000000;
+	color: rgb(255, 255, 255);
+	border: 2px solid white;
+  }
 
 /* footer */
 
