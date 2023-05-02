@@ -2,22 +2,24 @@
 
 //Funcion Input
 let playerNumber = 1;
+let player = "player_" + playerNumber;
 
 function pickName() {
   let newPlayer = inputName.value;
-  let player = "player_" + playerNumber;
+  
 
   if (newPlayer.length > 3 && newPlayer.length < 15) {
     localStorage.setItem(player, newPlayer);
     playerNumber++;
+    
   } else return;
 }
 
 //EventLIstener
-inputName.addEventListener("submit", function (event) {
-  event.preventDefault;
-  pickName();
-});
+// inputName.addEventListener("submit", function (event) {
+//   event.preventDefault;
+//   pickName();
+// });
 
 function createCardsEasy() {
   const gameEasy = document.querySelector("#gameEasy");
