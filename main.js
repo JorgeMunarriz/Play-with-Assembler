@@ -1,6 +1,6 @@
 /* ---------Page 2   */ 
 // para que se cargue le documento
-document.addEventListener("DOMContentLoaded", function() {
+inputName.addEventListener("click", function() {
 
     // formulario y el botón de Play
     const form = document.querySelector("#formUser");
@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Ocultar la primera pagina y visualizar la segunda
         const mainPage = document.querySelector("#mainPage");
         const mainPage2 = document.querySelector("#mainPage2");
-        mainPage.hidden = true;
-        mainPage2.hidden = false;
+        Section.classList.remove("main-page")
   
         // texto pagina 2
         const option = document.querySelector(".option");
