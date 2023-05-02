@@ -80,6 +80,7 @@ function createCardsEasy() {
     cardsContainer.appendChild(cardsBack);
   }
 }
+
 function createCardsDifficult() {
   const gameDifficult = document.querySelector("#gameDifficult");
 

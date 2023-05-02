@@ -70,6 +70,7 @@ btnEasy.addEventListener("click", function () {
   page3.classList.remove("hidden");
   shuffleEasy();
   createCardsEasy();
+  startTimer();
 });
 const btnHard = document.querySelector("#hard");
 btnHard.addEventListener("click", function () {
@@ -78,4 +79,5 @@ btnHard.addEventListener("click", function () {
   page4.classList.remove("hidden");
   shuffleDifficult();
   createCardsDifficult();
+  startTimer();
 });
