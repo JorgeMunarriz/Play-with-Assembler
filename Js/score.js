@@ -8,7 +8,7 @@ let timer = 0;
 //Function to create scoreboard item
 function createScore() {
   const userScore = document.createElement("h2");
-  userScore.textContent = `User's score`;
+  userScore.textContent = `User scores`;
   userScore.classList.add("user-h2")
   scoreboard.appendChild(userScore)
   const newPlayer = document.createElement("h3");
