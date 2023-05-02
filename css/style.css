@@ -102,8 +102,7 @@ body {
 	overflow: auto;
 	max-height: 50vh;
 
-}
-.container-right h2 {
+}.user-h2 {
 	font-size: 2.4rem;
 }
 

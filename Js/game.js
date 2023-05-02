@@ -24,6 +24,7 @@ function shuffleEasy() {
     const j = Math.floor(Math.random() * (i + 1));
     [shuffledCards[i], shuffledCards[j]] = [shuffledCards[j], shuffledCards[i]];
   }
+  createScore();
 }
 
 let cardDifficult = shuffledCards;
