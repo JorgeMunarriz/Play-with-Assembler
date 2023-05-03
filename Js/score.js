@@ -5,7 +5,7 @@ const scoreboardDiff = document.querySelector("#scoreboardDifficult");
 const scoreDiv1 = document.querySelector(".container-right1");
 const scoreDiv2 = document.querySelector(".container-right2");
 const btnReloaded = document.querySelector("#btnReloaded");
-const divCards = document.querySelector(".active");
+// const divCards = document.querySelector(".active");
 const btnCard = document.querySelector(".card-back")
 
 //constants game
@@ -154,16 +154,14 @@ function startTimer() {
           page3.style.display = "none"
           page4.style.display = "none"
           page5.style.display = "none"
-          startTimer(); // Se reinicia el temporizador
+           // Se reinicia el temporizador
         }, 5000);
       }
-    }, 2000);
-    stopTimer();
+    }, 1000);
+    
     
   }
-function stopTimer() {
-  clearInterval(timer);
-}
+
 
 function shuffleEasy() {
   while (shuffledCards.length < 8) {
@@ -347,14 +345,14 @@ function initCounters() {
 if (btnReloaded && !btnReloaded.disabled) {
     btnReloaded.addEventListener("click", () => {
       resetGame();
-      stopTimer();
+      
       initCounters();
       shuffleEasy();
     });
   }
 
 function resetGame() {
-  stopTimer();
+  
   initCounters();
 }
 
@@ -386,7 +384,6 @@ function gameEndEasy() {
   btnReload.setAttribute("id", "btnReloaded");
   btnReload.textContent = "Reload";
   scoreDiv1.insertAdjacentElement("afterend", btnReload);
-  startTimer();
   saveScore("easy", moves, timer, playerSucces);
   updateMatches();
   updateMoves();
