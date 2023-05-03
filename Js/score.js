@@ -251,44 +251,33 @@ if (btnCard && !btnCard.disabled) {
 
 
   function flipCard() {
-    if (canFlipCard(this)) {
-      this.classList.add("flipped");
-      if (!firstCard) {
-        firstCard = this;
-      } else {
-        secondCard = this;
-        if (cardsMatch(firstCard, secondCard)) {
-          cardsBack.filter(cardsBack => cardsBack.classList.contains('active')).forEach(cardsBack => cardsBack.classList.remove('active'));
-          cardsBack.filter(cardsBack => cardsBack.classList.contains('flipped')).forEach(cardsBack => cardsBack.classList.remove('active'));
-          matches++;
-          updateMatches();
-          if (matches === totalMatches) {
-            gameEnd();
-          }
-        } else {
-          cardsBack.filter(cardsBack => cardsBack.classList.contains('flipped')).forEach(cardsBack => setTimeout(() => cardsBack.classList.remove('flipped'), 1000));
-        }
-        flippedCards = 0;
-        firstCard = null;
-        secondCard = null;
-      }
+    if (flippedCards === 0) {
+      firstCard = this;
+      firstCard.classList.add('flipped');
+      flippedCards = 1;
+    } else {
+      secondCard = this;
+      secondCard.classList.add('flipped');
+      flippedCards = 2;
+      compareCards();
     }
   }
-
-function compareCards() {
-  if (firstCard.children[0].src === secondCard.children[0].src) {
-    setTimeout(() => {
-      firstCard.style.visibility = "hidden";
-      secondCard.style.visibility = "hidden";
-    }, 1000);
-  } else {
-    setTimeout(() => {
-      firstCard.classList.remove("flipped");
-      secondCard.classList.remove("flipped");
-    }, 1000);
+  
+  function compareCards() {
+    if (firstCard.children[0].src === secondCard.children[0].src) {
+      setTimeout(() => {
+        firstCard.style.visibility = 'hidden';
+        secondCard.style.visibility = 'hidden';
+      }, 1000);
+    } else {
+      setTimeout(() => {
+        firstCard.classList.remove('flipped');
+        secondCard.classList.remove('flipped');
+      }, 1000);
+    }
+    flippedCards = 0;
   }
-  flippedCards = 0;
-}
+
 
 function selectCards(index) {
   if (!selectedCards[index]) {

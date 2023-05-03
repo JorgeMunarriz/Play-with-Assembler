@@ -295,7 +295,7 @@ div h2 {
   cursor: pointer;
 }
 
-.cards-back {
+.card-back {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -307,7 +307,7 @@ div h2 {
   cursor: pointer;
 }
 
-.flipped {
+.card-back.flipped {
   transform: rotateY(180deg);
   cursor: pointer;
   z-index: 1000;
