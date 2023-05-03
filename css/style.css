@@ -136,6 +136,8 @@ body {
   box-sizing: border-box;
   background-image: url("../assets/fondomarvel.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 .header-page-2 {
@@ -280,10 +282,6 @@ div h2 {
   cursor: pointer;
 }
 
-.flipped{
-	transform: rotateY(180deg);
-}
-
 
 .card {
   height: 100%;
@@ -292,7 +290,7 @@ div h2 {
   object-fit: contain;
 }
 
-.active {
+.flipped {
   height: 100%;
   width: 100%;
   position: absolute;

@@ -16,25 +16,22 @@ let player = "player_" + playerNumber;
 btnPlay.addEventListener("click", function (event) {
   event.preventDefault();
   let newPlayer = inputName.value;
-  
-  
 
   if (newPlayer.length > 3 && newPlayer.length < 15) {
+    const player = "player_" + playerNumber;
     localStorage.setItem(player, newPlayer);
     playerNumber++;
     
-   
     const headerMain = document.querySelector("#headerMain");
     mainPage.style.display = "none";
     headerMain.hidden = true;
     page2.hidden = false;
 
-    // texto pagina 2
     const nameUser = document.querySelector("#nameUser");
-    nameUser.textContent = `Choose An Option, ${inputName.value}!`;
-    
-  } else return;
-  
+    nameUser.textContent = `Choose An Option, ${newPlayer}!`;
+  } else {
+    return;
+  }
 });
 const userScore = document.createElement("h2");
   userScore.textContent = `User scores`;
