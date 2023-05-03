@@ -33,7 +33,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-  min-height: 75vh;
+  
 }
 
 .main-page {
@@ -307,7 +307,7 @@ div h2 {
   cursor: pointer;
 }
 
-.card-back.flipped {
+.flipped {
   transform: rotateY(180deg);
   cursor: pointer;
   z-index: 1000;

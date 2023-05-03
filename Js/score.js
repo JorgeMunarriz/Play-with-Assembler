@@ -6,7 +6,7 @@ const scoreDiv1 = document.querySelector(".container-right1");
 const scoreDiv2 = document.querySelector(".container-right2");
 const btnReloaded = document.querySelector("#btnReloaded");
 const divCards = document.querySelector(".active");
-const btnCard = document.querySelector("#active")
+const btnCard = document.querySelector(".card-back")
 
 //constants game
 const cards = [
@@ -133,7 +133,7 @@ function createScoreDifficult() {
 
 function startTimer() {
    
-    const maxTime = 120; // Se define el tiempo máximo en segundos
+    const maxTime = 3000; // Se define el tiempo máximo en segundos
     const clock = setInterval(() => {
       timer++;
       const timePassed = document.querySelector("#timePassed");
@@ -157,7 +157,7 @@ function startTimer() {
           startTimer(); // Se reinicia el temporizador
         }, 5000);
       }
-    }, 1000);
+    }, 2000);
     stopTimer();
     
   }
