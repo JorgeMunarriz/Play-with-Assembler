@@ -76,6 +76,7 @@ btnEasy.addEventListener("click", function () {
   page3.classList.remove("hidden");
   shuffleEasy();
   createCardsEasy();
+  startTimer();
   createScoreEasy();
   
 });
@@ -86,6 +87,7 @@ btnHard.addEventListener("click", function () {
   page4.classList.remove("hidden");
   shuffleDifficult();
   createCardsDifficult();
+  startTimer();
   createScoreDifficult();
 });
 
