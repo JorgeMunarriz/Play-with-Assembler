@@ -17,6 +17,7 @@
     <script defer src="main.js"></script>
     <script defer src="Js/users.js"></script>
     <script defer src="Js/score.js"></script>
+	<script defer src="Js/footer.js"></script>
     <!-- <script defer src="Js/game.js"></script> -->
     <title>Play with Assembler</title>
   </head>
@@ -25,7 +26,7 @@
       <header id="headerMain" class="header">
         <h1>Memory Game</h1>
       </header>
-      <main class="main">
+      <main class="main" id="main">
         <section id="mainPage" class="main-page">
           <div class="container-left" id="containerLeft">
             <form id="formUser">
@@ -44,7 +45,7 @@
           <div class="container-right" id="scoreboard"></div>
         </section>
         <!-- PAGE 2 -->
-        <section hidden class="page-2" id="mainPage2">
+        <section  class="page-2" id="mainPage2" hidden>
           <div class="page2">
             <div class="header-page-2">
               <h2>Memory Game</h2>
@@ -72,19 +73,22 @@
             </div>
           </div>
         </section>
-        <section class="page-5" id="mainPage5"></section>
+        <section class="page-5" id="mainPage5" hidden></section>
       </main>
-      <footer id="footerPage" class="footer">
+      <footer id="footerPage" class="footer" >
         <div class="copyright-div">
           <p class="copyright">2023 &copy Copyright Squad L:</p>
-          <ul class="creators">
+		  <div class="toggleNav"></div>
+		  
+          <ul class="creators" id="creators">
             <li class="cr-names">Fran Pérez</li>
             <li class="cr-names">Horacio Martínez</li>
             <li class="cr-names">Kevin Polania</li>
             <li class="cr-names">Matias Alaimo</li>
             <li class="cr-names">Jorge Munárriz</li>
           </ul>
-        </div>
+        
+		</div>
         <div class="social-media">
           <ul class="social-ul">
             <a href="#">

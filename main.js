@@ -1,6 +1,6 @@
 /* ---------Page 2   */
 // para que se cargue le documento
-
+const main = document.getElementById("main")
 const mainPage = document.getElementById("mainPage");
 const page2 = document.getElementById("mainPage2");
 const page3 = document.getElementById("mainPage3");
@@ -18,7 +18,7 @@ btnPlay.addEventListener("click", function (event) {
   let newPlayer = inputName.value;
 
   if (newPlayer.length > 3 && newPlayer.length < 15) {
-    const player = "player_" + playerNumber;
+    
     localStorage.setItem(player, newPlayer);
     playerNumber++;
     
