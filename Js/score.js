@@ -220,6 +220,8 @@ function createCardsEasy() {
     gameEasy.appendChild(cardsContainer);
     cardsContainer.appendChild(cardsImg);
     cardsContainer.appendChild(cardsBack);
+
+    cardsContainer.addEventListener('click',flipCard);
   }
 }
 
@@ -241,52 +243,60 @@ function createCardsDifficult() {
     cardsContainer.appendChild(cardsBack);
   }
 }
-const flippedCards = [];
 
-if (btnCard && !btnCard.disabled) {
-    btnCard.addEventListener("click", flipCard)
+
+
+// function selectCards(index) {
+//    if (!selectedCards[index]) {
+//     selectedCards[index] = true;
+//     return shuffledCards[index];
+//    }
+//    return null;
+//  }
+//  function canClickCard(cardsBack) {
+//   return !cardsBack.isActive && !cardsBack.isFlipped;
+//  }
+
+let firstCard, secondCard;
+let flippedCards = 0;
+
+function flipCard() {
+  if (flippedCards === 0) {
+    firstCard = this;
+    firstCard.classList.add('flipped');
+    flippedCards = 1;
+  } else {
+    secondCard = this;
+    secondCard.classList.add('flipped');
+    flippedCards = 2;
+    moves++; // Incrementar el contador de movimientos
+    updateMoves();
+    compareCards();
   }
+}
 
-
-  function flipCard() {
-    if (flippedCards === 0) {
-      firstCard = this;
-      firstCard.classList.add('flipped');
-      flippedCards = 1;
+function compareCards() {
+  if (flippedCards === 2) {
+    let card1 = firstCard.querySelector('.card');
+    let card2 = secondCard.querySelector('.card');
+    if (card1.src === card2.src) {
+      // Cards match!
+      firstCard.removeEventListener('click', flipCard);
+      secondCard.removeEventListener('click', flipCard);
+      flippedCards = 0;
+      matches++;
+      updateMatches()
     } else {
-      secondCard = this;
-      secondCard.classList.add('flipped');
-      flippedCards = 2;
-      compareCards();
-    }
-  }
-  
-  function compareCards() {
-    if (firstCard.children[0].src === secondCard.children[0].src) {
-      setTimeout(() => {
-        firstCard.style.visibility = 'hidden';
-        secondCard.style.visibility = 'hidden';
-      }, 1000);
-    } else {
+      // Cards don't match - flip them back over
       setTimeout(() => {
         firstCard.classList.remove('flipped');
         secondCard.classList.remove('flipped');
+        flippedCards = 0;
       }, 1000);
     }
-    flippedCards = 0;
   }
-
-
-function selectCards(index) {
-  if (!selectedCards[index]) {
-    selectedCards[index] = true;
-    return shuffledCards[index];
-  }
-  return null;
 }
-function canClickCard(cardsBack) {
-  return !cardsBack.isActive && !cardsBack.isFlipped;
-}
+
 
 function handleCardClick(cards) {
   if (canClickCard(cards)) {

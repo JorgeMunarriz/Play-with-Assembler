@@ -76,6 +76,9 @@ function shuffleDifficult() {
   }
 }
 
+let firstCard, secondCard;
+let flippedCards = 0;
+
 function createCardsEasy() {
   const gameEasy = document.querySelector("#gameEasy");
 
@@ -92,6 +95,7 @@ function createCardsEasy() {
     gameEasy.appendChild(cardsContainer);
     cardsContainer.appendChild(cardsImg);
     cardsContainer.appendChild(cardsBack);
+    cardsContainer.addEventListener('click',handleCardClick);
   }
 }
 
@@ -114,6 +118,8 @@ function createCardsDifficult() {
   }
 }
 
+
+
 function handleCardClick(card) {
   if (canClickCard(card)) {
     card.classList.add("flipped");
@@ -131,7 +137,7 @@ function handleCardClick(card) {
         }
       } else {
         setTimeout(() => {
-          selectedCards.forEach((card) => card.classList.remove("flipped"));
+          selectedCards.forEach((card) => card.classList.remove('flipped'));
           selectedCards = [];
         }, 1000);
       }
@@ -166,3 +172,4 @@ function initCounters() {
     updateMatches();
   }
 }
+

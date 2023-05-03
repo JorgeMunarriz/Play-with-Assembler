@@ -282,10 +282,13 @@ div h2 {
   width: 100%;
   position: relative;
   transform-style: preserve-3d;
+  transform: rotateY(0deg);
   transition: transform 0.5s;
   cursor: pointer;
-  z-index: 1000;
 }
+/* .card-container:hover {
+	transform: rotateY(180deg);
+}  */
 
 .card {
   height: 100%;
@@ -309,8 +312,6 @@ div h2 {
 
 .flipped {
   transform: rotateY(180deg);
-  cursor: pointer;
-  z-index: 1000;
 }
 
 .hidden {
