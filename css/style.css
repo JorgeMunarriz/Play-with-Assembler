@@ -295,7 +295,7 @@ div h2 {
   cursor: pointer;
 }
 
-.cardsBack.active {
+.cards-back {
   height: 100%;
   width: 100%;
   position: absolute;

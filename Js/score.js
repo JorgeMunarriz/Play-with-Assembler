@@ -29,7 +29,7 @@ let selectedCards = [];
 //Succeses Variable
 let playerSucces = 0;
 //Time Variable
-let timer = 115;
+let timer = 0;
 let scores = JSON.parse(localStorage.getItem("scores")) || [];
 
 //Function to create scoreboardEasy item
@@ -216,7 +216,7 @@ function createCardsEasy() {
     cardsImg.classList.add("card");
 
     cardsImg.src = "assets/" + shuffledCards[i] + ".png";
-    cardsBack.classList.add("active");
+    cardsBack.classList.add("card-back");
     cardsBack.setAttribute("id", "active");
 
     gameEasy.appendChild(cardsContainer);
