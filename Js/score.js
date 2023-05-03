@@ -5,7 +5,6 @@ const scoreboardDiff = document.querySelector("#scoreboardDifficult");
 const scoreDiv1 = document.querySelector(".container-right1");
 const scoreDiv2 = document.querySelector(".container-right2");
 const btnReloaded = document.querySelector("#btnReloaded");
-// const divCards = document.querySelector(".active");
 const btnCard = document.querySelector(".card-back")
 
 //constants game
