@@ -95,7 +95,6 @@ function createCardsEasy() {
     gameEasy.appendChild(cardsContainer);
     cardsContainer.appendChild(cardsImg);
     cardsContainer.appendChild(cardsBack);
-    cardsContainer.addEventListener('click',handleCardClick);
   }
 }
 

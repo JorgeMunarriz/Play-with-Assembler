@@ -76,9 +76,7 @@ btnEasy.addEventListener("click", function () {
   page3.classList.remove("hidden");
   shuffleEasy();
   createCardsEasy();
-  startTimer();
   createScoreEasy();
-  
 });
 const btnHard = document.querySelector("#hard");
 btnHard.addEventListener("click", function () {

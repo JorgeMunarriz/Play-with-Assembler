@@ -265,7 +265,7 @@ function flipCard() {
     firstCard = this;
     firstCard.classList.add('flipped');
     flippedCards = 1;
-  } else {
+  } else if (flippedCards === 1 && this !== firstCard) {
     secondCard = this;
     secondCard.classList.add('flipped');
     flippedCards = 2;
@@ -275,14 +275,15 @@ function flipCard() {
   }
 }
 
+
 function compareCards() {
   if (flippedCards === 2) {
     let card1 = firstCard.querySelector('.card');
     let card2 = secondCard.querySelector('.card');
     if (card1.src === card2.src) {
       // Cards match!
-      firstCard.removeEventListener('click', flipCard);
-      secondCard.removeEventListener('click', flipCard);
+      firstCard.classList.add('flipped')
+      secondCard.classList.add('flipped')
       flippedCards = 0;
       matches++;
       updateMatches()
@@ -313,11 +314,6 @@ function handleCardClick(cards) {
         if (matches === totalMatches) {
           gameEnd();
         }
-      } else {
-        setTimeout(() => {
-          selectedCards.forEach((cardsBack) => cardsBack.classList.add("active"));
-          selectedCards = [];
-        }, 1000);
       }
     }
   }
